@@ -13,6 +13,10 @@
       padding: 0;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       background: #080808;
       color: #f7f7f7;
@@ -45,10 +49,12 @@
       font-weight: bold;
     }
 
-    .back-button {
-      background: white;
-      color: black;
-      padding: 10px 16px;
+    .back-button,
+    .book-button {
+      display: inline-block;
+      background: #fff;
+      color: #000;
+      padding: 11px 18px;
       border-radius: 6px;
       text-decoration: none;
       font-weight: bold;
@@ -56,8 +62,8 @@
 
     .hero {
       text-align: center;
-      padding: 60px 20px 40px;
-      max-width: 800px;
+      padding: 60px 20px 35px;
+      max-width: 850px;
       margin: auto;
     }
 
@@ -72,9 +78,9 @@
     }
 
     .categories {
-      max-width: 1200px;
+      max-width: 1100px;
       margin: auto;
-      padding: 20px;
+      padding: 10px 20px 30px;
       text-align: center;
     }
 
@@ -87,13 +93,12 @@
       flex-wrap: wrap;
       justify-content: center;
       gap: 10px;
-      margin-bottom: 40px;
     }
 
     .category-buttons a {
-      text-decoration: none;
       color: white;
-      border: 1px solid #555;
+      text-decoration: none;
+      border: 1px solid #666;
       padding: 10px 16px;
       border-radius: 25px;
     }
@@ -112,12 +117,12 @@
     .gallery-section h2 {
       text-align: center;
       font-size: 28px;
-      margin: 45px 0 25px;
+      margin: 40px 0 25px;
     }
 
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
       gap: 20px;
     }
 
@@ -126,11 +131,6 @@
       border: 1px solid #303030;
       border-radius: 10px;
       overflow: hidden;
-      transition: transform 0.3s ease;
-    }
-
-    .design-card:hover {
-      transform: translateY(-5px);
     }
 
     .design-card img {
@@ -170,16 +170,6 @@
       margin-bottom: 25px;
     }
 
-    .book-button {
-      display: inline-block;
-      background: white;
-      color: black;
-      padding: 14px 25px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
     footer {
       text-align: center;
       padding: 30px 20px;
@@ -188,16 +178,16 @@
     }
 
     @media (max-width: 600px) {
+      .nav {
+        flex-direction: column;
+      }
+
       .hero h1 {
         font-size: 30px;
       }
 
       .design-card img {
         height: 320px;
-      }
-
-      .nav {
-        flex-direction: column;
       }
     }
   </style>
@@ -207,9 +197,7 @@
 
   <header>
     <div class="nav">
-      <a href="index.html" class="logo">
-        Veronique Ink Tattoo Studio
-      </a>
+      <a href="index.html" class="logo">VERONIQUE INK</a>
 
       <a href="index.html" class="back-button">
         ← Back to Home
@@ -222,15 +210,14 @@
     <h1>Tattoo Design Gallery</h1>
 
     <p>
-      Explore different tattoo styles and designs. Find inspiration for your
-      next tattoo and choose a design that speaks to you.
+      Explore different tattoo styles and find inspiration for your next tattoo.
     </p>
   </section>
 
 
   <section class="categories">
 
-    <h2>Explore Different Styles</h2>
+    <h2>Choose a Tattoo Style</h2>
 
     <div class="category-buttons">
       <a href="#realistic">Realistic</a>
@@ -242,7 +229,7 @@
   </section>
 
 
-  <!-- REALISTIC DESIGNS -->
+  <!-- REALISTIC -->
 
   <section class="gallery-section" id="realistic">
 
@@ -251,21 +238,21 @@
     <div class="gallery">
 
       <div class="design-card">
-        <img src="assets/tattoo-design-1.png" alt="Tattoo Design">
-        <h3>Realistic Tattoo Design</h3>
-        <p>A detailed tattoo design for inspiration.</p>
+        <img src="assets/tattoo_design_1.png" alt="Realistic tattoo design 1">
+        <h3>Realistic Design</h3>
+        <p>Detailed tattoo artwork for inspiration.</p>
       </div>
 
       <div class="design-card">
-        <img src="assets/tattoo-design-2.png" alt="Tattoo Design">
+        <img src="assets/tattoo_design_2.png" alt="Realistic tattoo design 2">
         <h3>Detailed Artwork</h3>
-        <p>Professional tattoo inspiration and artwork.</p>
+        <p>A bold and detailed tattoo concept.</p>
       </div>
 
       <div class="design-card">
-        <img src="assets/tattoo-design-3.png" alt="Tattoo Design">
-        <h3>Realistic Style</h3>
-        <p>Detailed artwork with strong shading.</p>
+        <img src="assets/tattoo_design_3.png" alt="Realistic tattoo design 3">
+        <h3>Black & Grey Style</h3>
+        <p>Professional black and grey tattoo inspiration.</p>
       </div>
 
     </div>
@@ -273,7 +260,7 @@
   </section>
 
 
-  <!-- SLEEVE DESIGNS -->
+  <!-- SLEEVES -->
 
   <section class="gallery-section" id="sleeves">
 
@@ -282,15 +269,21 @@
     <div class="gallery">
 
       <div class="design-card">
-        <img src="assets/tattoo-warrior-sleeve.jpeg" alt="Warrior Sleeve Tattoo">
-        <h3>Warrior Sleeve</h3>
-        <p>A detailed warrior-inspired sleeve design.</p>
+        <img src="assets/tattoo_design_4.png" alt="Sleeve tattoo design">
+        <h3>Creative Sleeve</h3>
+        <p>A detailed design for a larger tattoo project.</p>
       </div>
 
       <div class="design-card">
-        <img src="assets/tattoo-design-4.png" alt="Sleeve Tattoo">
-        <h3>Creative Sleeve</h3>
-        <p>A design idea for a larger tattoo project.</p>
+        <img src="assets/tattoo_design_5.png" alt="Sleeve tattoo design">
+        <h3>Statement Sleeve</h3>
+        <p>A bold tattoo design with detailed artwork.</p>
+      </div>
+
+      <div class="design-card">
+        <img src="assets/tattoo-warrior-sleeve.jpeg" alt="Warrior sleeve tattoo">
+        <h3>Warrior Sleeve</h3>
+        <p>A powerful warrior-inspired sleeve design.</p>
       </div>
 
     </div>
@@ -298,7 +291,7 @@
   </section>
 
 
-  <!-- ANIMAL DESIGNS -->
+  <!-- ANIMALS -->
 
   <section class="gallery-section" id="animals">
 
@@ -307,15 +300,15 @@
     <div class="gallery">
 
       <div class="design-card">
-        <img src="assets/tattoo-bear-forest.jpeg" alt="Bear Forest Tattoo">
-        <h3>Bear & Mountain Forest</h3>
-        <p>A nature-inspired realistic tattoo design.</p>
+        <img src="assets/tattoo-bear-forest.jpeg" alt="Bear forest tattoo">
+        <h3>Bear & Forest</h3>
+        <p>A realistic nature-inspired tattoo design.</p>
       </div>
 
       <div class="design-card">
-        <img src="assets/tattoo-design-5.png" alt="Animal Tattoo">
+        <img src="assets/tattoo_design_6.png" alt="Animal tattoo design">
         <h3>Animal Design</h3>
-        <p>A bold animal-inspired tattoo concept.</p>
+        <p>A bold design inspired by animals and nature.</p>
       </div>
 
     </div>
@@ -323,45 +316,49 @@
   </section>
 
 
-  <!-- OTHER DESIGNS -->
+  <!-- MORE DESIGNS -->
 
   <section class="gallery-section" id="minimal">
 
-    <h2>Other Tattoo Styles</h2>
+    <h2>More Tattoo Designs</h2>
 
     <div class="gallery">
 
       <div class="design-card">
-        <img src="assets/tattoo-family-dice.jpeg" alt="Family Dice Tattoo">
+        <img src="assets/tattoo_design_7.png" alt="Tattoo design 7">
+        <h3>Creative Tattoo</h3>
+        <p>A unique tattoo design for inspiration.</p>
+      </div>
+
+      <div class="design-card">
+        <img src="assets/tattoo_design_8.png" alt="Tattoo design 8">
+        <h3>Simple & Stylish</h3>
+        <p>A clean and beautiful tattoo concept.</p>
+      </div>
+
+      <div class="design-card">
+        <img src="assets/tattoo_design_9.png" alt="Tattoo design 9">
+        <h3>Custom Design</h3>
+        <p>A creative idea for your next tattoo.</p>
+      </div>
+
+      <div class="design-card">
+        <img src="assets/tattoo-family-dice.jpeg" alt="Family dice tattoo">
         <h3>Family Dice Design</h3>
-        <p>A meaningful design combining family and classic imagery.</p>
-      </div>
-
-      <div class="design-card">
-        <img src="assets/tattoo-design-6.png" alt="Tattoo Design">
-        <h3>Simple & Minimalist</h3>
-        <p>A clean and simple tattoo inspiration.</p>
-      </div>
-
-      <div class="design-card">
-        <img src="assets/tattoo-design-7.png" alt="Tattoo Design">
-        <h3>Creative Design</h3>
-        <p>More artwork ideas for your next tattoo.</p>
+        <p>A meaningful tattoo design with personal symbolism.</p>
       </div>
 
     </div>
 
   </section>
 
-
-  <!-- BOOKING -->
 
   <section class="booking">
 
     <h2>Ready to Get Your Tattoo?</h2>
 
     <p>
-      Choose a design you like and return to our main website to book your appointment.
+      Choose a design you like and book an appointment with Veronique Ink.
       A 50% deposit is required to secure your appointment.
     </p>
 
